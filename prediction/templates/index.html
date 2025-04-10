@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Placement Prediction</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Form Container */
+        form {
+            max-width: 400px;
+            width: 90%;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Headings */
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Labels */
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Input Fields and Dropdowns */
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        /* Buttons */
+        input[type="submit"], input[type="reset"], button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 12px;
+            transition: background-color 0.3s ease;
+            width: 48%;
+        }
+
+        input[type="reset"] {
+            background-color: #d9534f;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #c9302c;
+        }
+
+        button {
+            background-color: #007bff;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Result Message */
+        .result-message {
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .success {
+            background-color: #dff0d8;
+            color: #3c763d;
+        }
+
+        .error {
+            background-color: #f2dede;
+            color: #a94442;
+        }
+
+        /* Button Container */
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            form {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            input, select, input[type="submit"], input[type="reset"], button {
+                font-size: 13px;
+                padding: 8px;
+            }
+
+            .result-message {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="/predict" method="POST">
+        <h1>Job Placement Prediction</h1>
+        <p>Fill in the following details to predict the likelihood of job placement use RandomForest machine learning algorithm.</p>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="28" placeholder="Enter your age" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="" disabled selected>Select your gender</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+        </select>
+
+        <label for="stream">Stream:</label>
+        <select id="stream" name="stream" required>
+            <option value="" disabled selected>Select your stream</option>
+            <option value="Civil">Civil</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Electrical">Electrical</option>
+            <option value="Electronics And Communication">Electronics And Communication</option>
+            <option value="Information Technology">Information Technology</option>
+            <option value="Mechanical">Mechanical</option>
+        </select>
+
+        <label for="internships">Have you done any Internships?</label>
+        <select id="internships" name="internships" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="history_of_backlogs">Do you have any backlogs (presently)?</label>
+        <select id="history_of_backlogs" name="history_of_backlogs" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="cgpa">CGPA:</label>
+        <input type="number" id="cgpa" name="cgpa" step="0.01" min="0" max="10" placeholder="Enter your CGPA" required>
+
+        <div class="button-container">
+            <input type="submit" value="Predict">
+            <input type="reset" value="Clear">
+        </div>
+    </form>
+
+    {% if result %}
+        <div class="result-message success">Prediction Result: {{ result }}</div>
+    {% endif %}
+    {% if error %}
+        <div class="result-message error">Error: {{ error }}</div>
+    {% endif %}
+
+    <!-- Home Button -->
+    <button onclick="window.location.href='http://localhost:5173/'">Home</button>
+</body>
+</html> 
