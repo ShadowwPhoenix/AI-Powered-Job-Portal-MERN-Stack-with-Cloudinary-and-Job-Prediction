@@ -24,10 +24,10 @@ This project leverages the LLaMA 3 model for generating conversational responses
 
 ### 🏠 Dashboard View
 
-![Dashboard View](screenshots/Screenshot%202025-02-27%20141114.png)
+![Dashboard View](Screenshots/Screenshot%202025-02-27%20141114.png)
 ### 📤 Job Posting Page
 
-![Job listing](screenshots/Screenshot%202025-02-27%20141300.png)
+![Job listing](Screenshots/Screenshot%202025-02-27%20141300.png)
 
 ---
 
