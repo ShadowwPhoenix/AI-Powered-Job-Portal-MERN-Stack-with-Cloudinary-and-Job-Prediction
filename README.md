@@ -8,7 +8,6 @@ This project introduces an end-to-end **AI-Powered Job Portal**, developed using
 
 This project leverages the LLaMA 3 model for generating conversational responses. The application provides a user-friendly interface where users can input messages, and the chatbot responds in real-time. The conversation history is stored and displayed, and all interactions are logged for future reference.
 
-
 ## 🚀 Features
 
 - 👤 User & Company Authentication (JWT)
@@ -147,4 +146,5 @@ python app.py
 
 
 Feel free to reach out with questions or suggestions.  
+G-Mail- varunyadav4868@gmail.com, sanjananvs812@gmail.com
 *by Shadow Phoenix*
