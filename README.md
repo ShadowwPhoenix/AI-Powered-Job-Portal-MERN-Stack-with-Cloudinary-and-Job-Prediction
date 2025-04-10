@@ -19,11 +19,15 @@ This project leverages the LLaMA 3 model for generating conversational responses
 - 🤖 ML-based Job Prediction using academic & skill inputs
 - 🎯 Role-based Dashboards (User / Recruiter)
 - 🧠 Integrated Flask ML model (CGPA, skills → predicted placement)
+---
+## 📷 Screenshots
 
+### 🏠 Dashboard View
 
-![Interface](Screenshots/Screenshot 2025-02-27 141114.png)
+![Dashboard View](screenshots/Screenshot%202025-02-27%20141114.png)
+### 📤 Job Posting Page
 
-![Job listing](Screenshots/Screenshot 2025-02-27 141300.png)
+![Job listing](screenshots/Screenshot%202025-02-27%20141300.png)
 
 ---
 
