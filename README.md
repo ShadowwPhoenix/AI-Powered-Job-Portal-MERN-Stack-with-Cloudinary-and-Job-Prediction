@@ -21,9 +21,9 @@ This project leverages the LLaMA 3 model for generating conversational responses
 - 🧠 Integrated Flask ML model (CGPA, skills → predicted placement)
 
 
-![Interface](Screenshot/Screenshot 2025-02-27 141114.png)
+![Interface](Screenshots/Screenshot 2025-02-27 141114.png)
 
-![Job listing](Screenshot/Screenshot 2025-02-27 141300.png)
+![Job listing](Screenshots/Screenshot 2025-02-27 141300.png)
 
 ---
 
